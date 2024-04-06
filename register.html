@@ -1,0 +1,142 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body>
+ 
+
+<div class="min-h-full">
+    <nav class="bg-gray-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-20 w-20" src="src/logo.png" alt="Your Company">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                <a href="register.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Register</a>
+                <a href="records.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Records</a>
+                <a href="about.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+              </div>
+            </div>
+          </div>
+         
+  </nav>
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">New Entry</h1>
+      </div>
+    </header>
+    <main>
+      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+<form action="store_data.php" method="post">
+    
+  
+      <div class="border-b border-gray-900/10 pb-12">
+        <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
+        <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+  
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="sm:col-span-6">
+                <label for="ID" class="block text-sm font-medium leading-6 text-gray-900">ID</label>
+                <div class="mt-2">
+                  <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                    <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm"></span>
+                    <input type="text" name="ID" id="ID" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="#1234">
+                  </div>
+                </div>
+              </div>
+          <div class="sm:col-span-1">
+            <label for="Fname" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+            <div class="mt-3">
+              <input type="text" name="Fname" id="Fname" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-1">
+            <label for="Mname" class="block text-sm font-medium leading-6 text-gray-900">Middle name</label>
+            <div class="mt-3">
+              <input type="text" name="Mname" id="Mname" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+  
+          <div class="sm:col-span-1">
+            <label for="Lname" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+            <div class="mt-3">
+              <input type="text" name="Lname" id="Lname" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+  
+          <div class="sm:col-span-4">
+            <label for="mobNo" class="block text-sm font-medium leading-6 text-gray-900">Contact number</label>
+            <div class="mt-2">
+              <input id="mobNo" name="mobNo" type="tel" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-4">
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div class="col-span-full">
+            <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Street address</label>
+            <div class="mt-2">
+              <input type="text" name="address" id="address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-12">
+        <div class="border-b border-gray-900/10 pb-12">
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Patient Information</h2>
+          <p class="mt-1 text-sm leading-6 text-gray-600">Fill the Information as per prescribed by experts consultance</p>
+    
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-7"></div>
+              <div class="sm:col-span-1">
+                <label for="height" class="block text-sm font-medium leading-6 text-gray-900">Height</label>
+                <div class="mt-1">
+                  <input type="number" name="height" id="height" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+              </div>
+              <div class="sm:col-span-1">
+                <label for="weight" class="block text-sm font-medium leading-6 text-gray-900">Weight</label>
+                <div class="mt-1">
+                  <input type="number" name="weight" id="weight" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+              </div>
+    
+            <div class="col-span-full">
+                
+              <label for="heredity" class="block text-sm font-medium leading-6 text-gray-900">Heredity</label>
+              <div class="mt-2">
+                <textarea id="heredity" name="heredity" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+              </div>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about yourself.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mt-6 flex items-center justify-center gap-x-6" style="padding-bottom: 30px;">
+      <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+      <button value="Submit"type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+    </div>
+  </form>
+  
+      </div>
+    </main>
+  </div>
+</body>
+</html>
